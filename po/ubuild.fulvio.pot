@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-21 13:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/AboutProductDialog.qml:10
+msgid "Product Info"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:47
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:45
+msgid "Add a new Jenkins"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:58
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:56
+msgid "Display Name:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:75
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:70
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:160
+msgid "URL:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:91
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:106
+msgid "Field required"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:100
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:84
+msgid "Save"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:122
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:117
+msgid "Show"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:136
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:131
+msgid "Load Default"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/DataBaseEraserDialog.qml:49
+msgid "Succesfully Removed ALL data"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:9
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/NoDataFoundDialog.qml:11
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/OperationSuccessResult.qml:11
+msgid "Operation Result"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:15
+msgid "Invalid input: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:20
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:70
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:141
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:140
+msgid "Close"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:47
+msgid "Remove selected Jenkins URL ?"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:47
+msgid "(there is no restore)"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:76
+msgid "Delete"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:84
+msgid "Operation executed successfully"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:141
+msgid "Display name:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:70
+msgid "Job name: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:75
+msgid "url: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:80
+msgid "Status: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:37
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:36
+msgid "Enable auto-refresh (2 minutes)"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:61
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:60
+msgid "Search job name"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:76
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:75
+msgid "Filter"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:111
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:110
+msgid "Total Jobs found: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:127
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:126
+msgid "Found: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:149
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:148
+msgid "Select"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:175
+msgid "Choose Target Jenkins..."
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:191
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:187
+msgid "Load jobs"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:202
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:226
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:198
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:222
+msgid "Last check: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:173
+msgid "Choose Jenkins..."
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:127
+msgid "About"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:228
+msgid "Details for: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:253
+msgid "Application Configuration"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:280
+msgid "Saved Jenkins Url(s) found: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/NoDataFoundDialog.qml:14
+msgid "No saved Jenkins url found to display"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/OperationSuccessResult.qml:14
+msgid "Operation executed Successfully"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/build-uBuild-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/uBuild/uBuild.desktop.h:1
+msgid "uBuild"
+msgstr ""

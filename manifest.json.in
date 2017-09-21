@@ -1,0 +1,15 @@
+{
+    "name": "ubuild",
+    "description": "A simple read-only monitor for your favourite Jenkins",
+    "architecture": "@CLICK_ARCH@",
+    "title": "uBuild",
+    "hooks": {
+        "uBuild": {
+            "apparmor": "uBuild/uBuild.apparmor",
+            "desktop": "uBuild/uBuild.desktop"
+        }
+    },
+    "version": "1.0.1",
+    "maintainer": "fulvio <fulvio999@gmail.com>",
+    "framework": "ubuntu-sdk-15.04.6-qml"
+}

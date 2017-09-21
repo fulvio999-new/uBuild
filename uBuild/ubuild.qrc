@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>unknown.svg</file>
+        <file>uBuild.png</file>
+        <file>refresh.png</file>
+        <file>red.png</file>
+        <file>nobuilt.png</file>
+        <file>aborted.png</file>
+        <file>blue.png</file>
+        <file>building_anime.gif</file>
+        <file>disabled.png</file>
+        <file>folder.png</file>
+        <file>green.gif</file>
+        <file>utility.js</file>
+        <file>Storage.js</file>
+        <file>NodesRestClient.js</file>
+        <file>JobsRestClientDebug.js</file>
+        <file>JobsRestClient.js</file>
+        <file>BuildQueueRestClient.js</file>
+    </qresource>
+</RCC>

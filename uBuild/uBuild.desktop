@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=uBuild
+Exec=qmlscene %U uBuild/Main.qml
+Icon=uBuild/uBuild.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
