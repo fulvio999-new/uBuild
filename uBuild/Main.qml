@@ -26,7 +26,7 @@ MainView {
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.0.1"
+    property string appVersion : "1.1"
 
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */
     Settings {
@@ -184,6 +184,8 @@ MainView {
                 boundsBehavior: Flickable.StopAtBounds
                 highlight: HighlightComponent{}              
                 focus: true
+                /* clip:true to prevent that UbuntuListView draw out of his assigned rectangle, default is false */
+                clip: true
             }
 
             Layouts {

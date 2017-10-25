@@ -113,7 +113,7 @@
         if(textToConvert === "N/A")
             return "N/A"
         else
-            return colorLinks(textToConvert);
+          return colorLinks(i18n.tr("<a href=\"%1\">"+textToConvert+"</a>").arg(textToConvert))
     }
 
 

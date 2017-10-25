@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-21 13:41+0000\n"
+"POT-Creation-Date: 2017-10-25 14:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,15 +164,15 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:228
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:230
 msgid "Details for: "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:253
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:255
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:280
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:282
 msgid "Saved Jenkins Url(s) found: "
 msgstr ""
 
@@ -182,6 +182,11 @@ msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/OperationSuccessResult.qml:14
 msgid "Operation executed Successfully"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/utility.js:116
+#, qt-format
+msgid "<a href=\"%1\">"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/build-uBuild-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/uBuild/uBuild.desktop.h:1
