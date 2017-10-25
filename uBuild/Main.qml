@@ -221,8 +221,42 @@ MainView {
             property string jobName;     /* the name of the selected job */
             property string jenkinsBaseUrl;
 
+            /* filled with the artifacts found for the chosen build */
+            ListModel{
+               id: artifactList
+            }
+
+            //------- Display the Artifact list with a PopUp ----------
+            Component {
+                id: popoverArtifactListComponent
+
+                Dialog {
+                    id: subCategoryPickerDialog
+                    title: i18n.tr("Found: "+artifactList.count +" Artifact(s)")
+
+                    OptionSelector {
+                        id: subCategoryOptionSelector
+                        expanded: true
+                        multiSelection: false
+                        model: artifactList
+                        containerHeight: itemHeight * 4
+                    }
+
+                    Button {
+                        anchors.horizontalCenter: parent.Center
+                        text: i18n.tr("Close")
+                        width: units.gu(14)
+                        onClicked: {
+                            PopupUtils.close(subCategoryPickerDialog)
+                        }
+                    }
+                }
+            }
+            //---------------------------------------------------------
+
+
             onVisibleChanged: {
-               pageLoader.source = (root.width > units.gu(80)) ? "JobDetailsTablet.qml" : "JobDetailsPhone.qml"
+                pageLoader.source = (root.width > units.gu(80)) ? "JobDetailsTablet.qml" : "JobDetailsPhone.qml"
             }
 
             header: PageHeader {
@@ -230,19 +264,19 @@ MainView {
                 title: i18n.tr("Details for: ") + "<b>" +jobDetailsPage.jobName +"</b>"
 
                 leadingActionBar.actions: [
-                        Action {
-                            iconName: "back"
-                            text: "Back"
+                    Action {
+                        iconName: "back"
+                        text: "Back"
 
-                            onTriggered:{
-                                 pageStack.clear();
-                                 pageStack.push(jobsListPage);
-                                 /* otherwise there is an overlap of jobList and jobDetails Pages */
-                                 pageLoader.source = "";
-                            }
+                        onTriggered:{
+                            pageStack.clear();
+                            pageStack.push(jobsListPage);
+                            /* otherwise there is an overlap of jobList and jobDetails Pages */
+                            pageLoader.source = "";
                         }
-                    ]
-            }           
+                    }
+                ]
+            }
         }
 
 

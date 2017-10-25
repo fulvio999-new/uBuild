@@ -7,14 +7,8 @@ import Ubuntu.Layouts 1.0
 import "JobsRestClient.js" as JobsRestClient
 
 /* Show the details of the selected job */
-Flickable {
-    id: flic
-    anchors.fill: parent
-    contentWidth: jobDetailsColumn.width;
-    contentHeight: units.gu(6);
-    flickableDirection: Flickable.HorizontalFlick; //necessary in case of Artifacts list is too long
 
-    Column {
+ Column {
         id: jobDetailsColumn
 
         anchors.fill: parent
@@ -218,7 +212,6 @@ Flickable {
                 text: "<b>Build time: </b>"
             }
 
-
             Label {
                 id: lastStableBuildEstimatedDurationLabel
                 text: "<b>Build estimated duration: </b>"
@@ -231,13 +224,23 @@ Flickable {
         }
 
         Row{
+            spacing: units.gu(3)
+
             Label {
                 id: lastStableArtifactsArrayLabel
+                anchors.verticalCenter: showArtifactButton.verticalCenter
                 text: "<b>Artifacts: </b>"
             }
 
-        }
-        //------------------------
+            Button{
+                id:showArtifactButton
+                text: "Display"
+                color: UbuntuColors.graphite
+                onClicked: {
+                   PopupUtils.open(popoverArtifactListComponent, showArtifactButton)
+                }
+            }
+        }      
 
 
         /* line separator */
@@ -312,13 +315,5 @@ Flickable {
         }
         //------------------------
 
-    }
-
-    Scrollbar {
-        flickableItem: flic
-        align: Qt.AlignTrailing
-    }
-
-}
-
+   }
 

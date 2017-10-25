@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 14:48+0000\n"
+"POT-Creation-Date: 2017-10-25 16:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,6 +75,7 @@ msgstr ""
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:70
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:141
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:140
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:247
 msgid "Close"
 msgstr ""
 
@@ -132,6 +133,7 @@ msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:127
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:126
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:235
 msgid "Found: "
 msgstr ""
 
@@ -164,15 +166,15 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:230
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:264
 msgid "Details for: "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:255
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:289
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:282
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:316
 msgid "Saved Jenkins Url(s) found: "
 msgstr ""
 

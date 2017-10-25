@@ -224,6 +224,7 @@
                                         "lastStableArtifactsArray" :artifactsArray
                                       }]);
 
+        //enable for debug
         //JobsRestClientDebug.printLastStableBuildModel(lastStableBuildDetails);
         //JobsRestClientDebug.printJavascriptArray(artifactsArray);
 
@@ -232,17 +233,16 @@
         lastStableBuildEstimatedDurationLabel.text = lastStableBuildEstimatedDurationLabel.text + lastStableBuildDetails.get(0).lastStableBuildEstimatedDuration
         lastStableBuildResultLabel.text = lastStableBuildResultLabel.text + lastStableBuildDetails.get(0).lastStableBuildResult
 
-        var fileNameList = "";
+
+        /* fill the ListModel wiht the artifacts found for the build  */
         for (var i = 0; i < artifactsArray.length; i++) {
            var object = artifactsArray[i];
 
            for (var property in object) {
                //console.log("item [" + i + "]: " + property + " = " + object[property]);
                if(property === "fileName")
-                  fileNameList += object[property] + ";   "
+                  artifactList.append( {"fileName": object[property] });
            }
         }
-
-        lastStableArtifactsArrayLabel.text = lastStableArtifactsArrayLabel.text + fileNameList
     }
 
