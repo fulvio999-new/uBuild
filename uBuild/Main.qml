@@ -14,7 +14,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
 MainView {
 
-    id: root
+    id: rootPage
 
     objectName: "mainView"
 
@@ -27,6 +27,8 @@ MainView {
     anchorToKeyboard: true
 
     property string appVersion : "1.1"
+
+    property string jenkinsTargetUrl;
 
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */
     Settings {
@@ -116,7 +118,7 @@ MainView {
 
             header: PageHeader {
                 id: pageHeader
-                title: "uBuild "+root.appVersion
+                title: "uBuild "+rootPage.appVersion
 
                 /* leadingActionBar is the bar on the left side */
                 leadingActionBar.actions: [
@@ -166,10 +168,10 @@ MainView {
             SortFilterModel {
                 id: sortedModelListJobs
                 model: modelListJobs
-                sort.property: "jobName"
+                //sort.property: "jobName"
                 sort.order: Qt.AscendingOrder
                 sortCaseSensitivity: Qt.CaseSensitive
-                filter.property: "jobName"
+                //filter.property: "jobName"
             }
 
             /* The Jobs list loaded from the chosen Jenkins url */
@@ -188,6 +190,19 @@ MainView {
                 clip: true
             }
 
+
+            Component {
+                 id: reportTypeSelectorDelegate
+                 OptionSelectorDelegate { text: name; }
+             }
+
+            /* The available Job filter criteria */
+            ListModel {
+                 id: searchFilterModel
+                 ListElement { name: "<b>Job Name</b>" }
+                 ListElement { name: "<b>Job Status</b>" }
+            }
+
             Layouts {
                 id: layoutJobsMainPage
                 width: parent.width
@@ -196,7 +211,7 @@ MainView {
 
                     ConditionalLayout {
                         name: "layoutsConfiguration"
-                        when: root.width > units.gu(50)
+                        when: rootPage.width > units.gu(50)
                         JobsMainPageTablet{}
                     }
                 ]
@@ -256,7 +271,7 @@ MainView {
 
 
             onVisibleChanged: {
-                pageLoader.source = (root.width > units.gu(80)) ? "JobDetailsTablet.qml" : "JobDetailsPhone.qml"
+                pageLoader.source = (rootPage.width > units.gu(80)) ? "JobDetailsTablet.qml" : "JobDetailsPhone.qml"
             }
 
             header: PageHeader {
@@ -297,7 +312,7 @@ MainView {
 
                     ConditionalLayout {
                         name: "layoutsConfiguration"
-                        when: root.width > units.gu(50)
+                        when: rootPage.width > units.gu(50)
                         ConfigurationPageTablet{}
                     }
                 ]
@@ -329,7 +344,7 @@ MainView {
             UbuntuListView {
                 id: savedJenkinsListView
                 anchors.fill: parent
-                anchors.topMargin: units.gu(8) //Utility.getOffsetAmount() //units.gu(jenkinsUrlDelegate.height) // units.gu(33)
+                anchors.topMargin: units.gu(8)
                 model: savedJenkinsUrlListModel
                 delegate: jenkinsUrlDelegate
                 /* if false, the List scroll under the above component (ie. the search form) */

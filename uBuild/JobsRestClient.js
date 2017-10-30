@@ -29,8 +29,20 @@
                         /* if a job have no 'color' set, means that is a folder, and this statement generate an Exception */
                         var tmp = obj.jobs[i].color.toString();
 
+                        /* detect the jobStatus depending on the icon color returned by the Rest call */
+                        var jobStatus = "";
+                        if(obj.jobs[i].color === "blue"){
+                           jobStatus = "success";
+                        }else if (obj.jobs[i].color === "red"){
+                           jobStatus = "failed";
+                        }else if(jobColor.indexOf("anime") !== -1){
+                           jobStatus = "progress";
+                        }else if (obj.jobs[i].color === "disabled"){
+                           jobStatus = "disabled";
+                        }
+
                         /* if no exception, add job to the model */
-                        modelListJobs.append({"jobName" : obj.jobs[i].name, "jobUrl" : obj.jobs[i].url, "jobColor" : obj.jobs[i].color, "jenkinsBaseUrl":jenkinsBaseUrl } );
+                        modelListJobs.append({"jobName" : obj.jobs[i].name, "jobUrl" : obj.jobs[i].url, "jobColor" : obj.jobs[i].color, "jenkinsBaseUrl":jenkinsBaseUrl, "jobStatus":jobStatus } );
 
                      }catch(e){
                         //console.log("Found a folder, executing a recursive call to url: "+obj.jobs[i].url)

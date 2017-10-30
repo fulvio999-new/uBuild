@@ -17,7 +17,8 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
    */
         Column{          
             id: listHeader
-            x: jobsListPage.width/3           
+           // x: jobsListPage.width/4
+            anchors.horizontalCenter:parent.horizontalCenter
             spacing: units.gu(1.5) 
 
             /* transparent placeholder: required to place the content under the header */
@@ -50,48 +51,6 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
-            Row{
-                id:row1
-                spacing: units.gu(6)
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                TextField{
-                    id: filterJobField
-                    placeholderText: i18n.tr("Search job name")
-                    width: units.gu(34)
-                    enabled:false
-                    onTextChanged: {
-
-                        if(text.length === 0 ) { //show all
-                            sortedModelListJobs.filter.pattern = /./
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-                        }
-                    }
-                }
-
-                Button{
-                    id:jobFilterButton
-                    text: i18n.tr("Filter")
-                    width: units.gu(14)
-                    x: loadJobsButton.x
-                    onClicked: {
-                        if(filterJobField.text.length > 0 ) //filter
-                        {
-                            /* flag "i" = ignore case */
-                            sortedModelListJobs.filter.pattern = new RegExp(filterJobField.text, "i")
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-
-                        } else { //show all
-
-                            sortedModelListJobs.filter.pattern = /./
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-                        }
-                    }
-                }
-            }
 
             Row{
                 id:row2
@@ -113,10 +72,11 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
+
             Row{
                 id: row3
                 anchors.horizontalCenter: parent.horizontalCenter
-                spacing: units.gu(2)
+                spacing: units.gu(1)
 
                 Component {
                     id: jenkinsUrlChooser
@@ -152,7 +112,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                                     var url = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;
 
                                     jenkinsUrlChooserField.text = name;
-                                    jenkinUrlText.text =url;
+                                    rootPage.jenkinsTargetUrl = url;
                                     /* clean old showed values */
                                     modelListJobs.clear();
                                     /* blank old values */
@@ -187,14 +147,16 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     text: i18n.tr("Load jobs")
                     onClicked: {
 
-                        if(! Utility.isInputTextEmpty(jenkinUrlText.text)){
+                        if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
                             loadingJobListActivity.running = !loadingJobListActivity.running //start
 
                             modelListJobs.clear();
-                            JobsRestClient.getJobList(jenkinUrlText.text)
+                            JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
                             filterJobField.enabled = true;
                             autoRefresh.enabled = true;
+                            jobFilterTypeSelector.enabled = true;
+                            jobFilterButton.enabled = true;
                             lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")                            
 
                             loadingJobListActivity.running = !loadingJobListActivity.running  //stop
@@ -207,18 +169,18 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 /* to refresh displayed jobs and status */
                 Timer {
                     id: refreshJobsStatusTimer
-                    interval: 120000;  //120 sec
+                    interval: 120000;  /* millisec */
                     running: false;
                     repeat: true
                     onTriggered: {
                         //console.log("Refresh jobs status at: "+ Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss"))
 
-                        if(! Utility.isInputTextEmpty(jenkinUrlText.text)){
+                        if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
                             loadingJobListActivity.running = !loadingJobListActivity.running //start
 
                             modelListJobs.clear();
-                            JobsRestClient.getJobList(jenkinUrlText.text)
+                            JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
                             lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
                             lastCheckLabel.visible = true;                           
 
@@ -230,13 +192,88 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
+
             Row{
-                id: jenkinUrlRow
-                /* Display the full Jenkins URL */                
-                Text {
-                    id: jenkinUrlText
-                    font.pointSize: units.gu(1.4)
+                id:row1
+                spacing: units.gu(3)
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                Label {
+                   text: i18n.tr("Filter by:")
+                   anchors.verticalCenter: filterJobField.verticalCenter
+                }
+
+                Rectangle{
+                    id:itemSelectorContainer
+                    width:  filterJobField.width/2
+                    height:filterJobField.height - units.gu(2)
+
+                    ListItem.ItemSelector {
+                        id: jobFilterTypeSelector
+                        enabled:false
+                        delegate: reportTypeSelectorDelegate //serve ???
+                        model: searchFilterModel
+                        clip:true
+                        containerHeight: itemHeight * 2
+                    }
+                }
+
+                TextField{
+                    id: filterJobField
+                    placeholderText: i18n.tr("Job name or Job status")
+                    width: units.gu(34)
+                    enabled:false
+                    onTextChanged: {
+
+                        if(text.length === 0 ) { /* show all */
+                            sortedModelListJobs.filter.pattern = /./
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+                        }
+                    }
+                }
+
+                Button{
+                    id:jobFilterButton
+                    text: i18n.tr("Filter")
+                    width: units.gu(14)
+                    enabled: false
+                    x: loadJobsButton.x
+                    onClicked: {
+
+                        /* default */
+                        var filtetCriteria = "jobName";
+
+                        if (searchFilterModel.get(jobFilterTypeSelector.selectedIndex).name === "<b>Job Status</b>"){
+                           filtetCriteria = "jobStatus"; //jobColor
+                        }
+
+                        // console.log("Chosen Search Criteria: "+filtetCriteria)
+
+                        if(filterJobField.text.length > 0 ) //filter
+                        {
+                            /* flag "i" = ignore case */
+                            sortedModelListJobs.filter.pattern = new RegExp(filterJobField.text, "i")
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+
+                            if(filtetCriteria === "jobStatus"){
+                               sortedModelListJobs.sort.property = "jobStatus"
+                               sortedModelListJobs.filter.property = "jobStatus"
+                            }else{
+                               sortedModelListJobs.sort.property = "jobName"
+                               sortedModelListJobs.filter.property = "jobName"
+                            }
+
+                        } else { //show all
+
+                            sortedModelListJobs.filter.pattern = /./
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+                        }
+                    }
                 }
             }
+
         }
 
