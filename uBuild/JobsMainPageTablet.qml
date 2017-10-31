@@ -15,7 +15,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
    /*
       Show the Job search form shown when running on Tablet
    */
-        Column{          
+     Column{
             id: listHeader
            // x: jobsListPage.width/4
             anchors.horizontalCenter:parent.horizontalCenter
@@ -250,6 +250,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                         // console.log("Chosen Search Criteria: "+filtetCriteria)
 
+
                         if(filterJobField.text.length > 0 ) //filter
                         {
                             /* flag "i" = ignore case */
@@ -257,7 +258,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             sortedModelListJobs.sort.order = Qt.AscendingOrder
                             sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
 
-                            if(filtetCriteria === "jobStatus"){
+                            if(filtetCriteria === "jobStatus"){  //filter by status
                                sortedModelListJobs.sort.property = "jobStatus"
                                sortedModelListJobs.filter.property = "jobStatus"
                             }else{

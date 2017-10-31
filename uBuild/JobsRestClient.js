@@ -26,34 +26,37 @@
                  for(var i=0; i<obj.jobs.length; i++){
 
                      try{
-                        /* if a job have no 'color' set, means that is a folder, and this statement generate an Exception */
-                        var tmp = obj.jobs[i].color.toString();
+                         /* workaround to check if color is set if a job have no 'color' set, means that is a folder, and this statement generate an Exception */
+                         var color = obj.jobs[i].color.toString();
 
-                        /* detect the jobStatus depending on the icon color returned by the Rest call */
-                        var jobStatus = "";
-                        if(obj.jobs[i].color === "blue"){
-                           jobStatus = "success";
-                        }else if (obj.jobs[i].color === "red"){
-                           jobStatus = "failed";
-                        }else if(jobColor.indexOf("anime") !== -1){
-                           jobStatus = "progress";
-                        }else if (obj.jobs[i].color === "disabled"){
-                           jobStatus = "disabled";
-                        }
+                         var jobStatus = "";
+                         if(color === "blue"){
+                             jobStatus = "success";
+                         }else if (color === "red"){
+                             jobStatus = "failed";
+                         }else if(color.indexOf("anime") !== -1){
+                             jobStatus = "progress";
+                         }else if (color === "disabled"){
+                             jobStatus = "disabled";
+                         }else if (color === "aborted"){
+                             jobStatus = "aborted";
+                         }else if (color === "notbuilt"){
+                             jobStatus = "notbuilt";
+                         }
 
-                        /* if no exception, add job to the model */
-                        modelListJobs.append({"jobName" : obj.jobs[i].name, "jobUrl" : obj.jobs[i].url, "jobColor" : obj.jobs[i].color, "jenkinsBaseUrl":jenkinsBaseUrl, "jobStatus":jobStatus } );
+                         /* if no exception, add job to the model */
+                         modelListJobs.append({"jobName" : obj.jobs[i].name, "jobUrl" : obj.jobs[i].url, "jobColor" : obj.jobs[i].color, "jenkinsBaseUrl":jenkinsBaseUrl, "jobStatus":jobStatus } );
 
                      }catch(e){
                         //console.log("Found a folder, executing a recursive call to url: "+obj.jobs[i].url)
                         getJobList(obj.jobs[i].url);
                      }
-                 }                
-             }          
+                 }
+             }
         }
 
         xmlhttp.open("GET", urlToCall, true);
-        xmlhttp.send();        
+        xmlhttp.send();
     }
 
     /*

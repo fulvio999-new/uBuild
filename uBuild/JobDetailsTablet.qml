@@ -229,7 +229,7 @@ import "JobsRestClient.js" as JobsRestClient
             Label {
                 id: lastStableArtifactsArrayLabel
                 anchors.verticalCenter: showArtifactButton.verticalCenter
-                text: "<b>Artifacts: </b>"
+                text: "<b>Artifact(s) found: "+artifactList.count+" </b>"
             }
 
             Button{
