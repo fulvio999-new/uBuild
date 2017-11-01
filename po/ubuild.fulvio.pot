@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-31 17:54+0000\n"
+"POT-Creation-Date: 2017-11-01 00:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgstr ""
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:70
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:141
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:100
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:262
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:263
 msgid "Close"
 msgstr ""
 
@@ -132,7 +132,7 @@ msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:127
 #: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:86
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:250
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:251
 msgid "Found: "
 msgstr ""
 
@@ -173,15 +173,15 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:279
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:280
 msgid "Details for: "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:304
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:305
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:331
+#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:332
 msgid "Saved Jenkins Url(s) found: "
 msgstr ""
 
@@ -198,6 +198,6 @@ msgstr ""
 msgid "<a href=\"%1\">"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/build-uBuild-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/uBuild/uBuild.desktop.h:1
+#: /home/fulvio/Dropbox/ubuntu-devel/build-uBuild-UbuntuSDK_for_device_15_04_armhf_GCC_armhf_ubuntu_sdk_15_04_tablet-Debug/uBuild/uBuild.desktop.h:1
 msgid "uBuild"
 msgstr ""

@@ -247,6 +247,7 @@ MainView {
 
                 Dialog {
                     id: subCategoryPickerDialog
+                    contentWidth: units.gu(42)
                     title: i18n.tr("Found: "+artifactList.count +" Artifact(s)")
 
                     OptionSelector {
