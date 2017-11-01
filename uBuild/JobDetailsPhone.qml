@@ -343,8 +343,6 @@ import "JobsRestClient.js" as JobsRestClient
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
-
-
         //------------------------
 
   }
