@@ -12,14 +12,13 @@ import "Storage.js" as Storage
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
-    /*
-       Show job search form shown when running on Phone
-    */
-        Column{
+   /*
+      Show the Job search form shown when running on Tablet
+   */
+     Column{
             id: listHeader
-            x: units.gu(1)
-
-            spacing: units.gu(1)
+            anchors.horizontalCenter:parent.horizontalCenter
+            spacing: units.gu(1.5)
 
             /* transparent placeholder: required to place the content under the header */
             Rectangle {
@@ -42,7 +41,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     checked: false
                     enabled: false
                     onCheckedChanged: {
-                        if(autoRefresh.checked){                          
+                        if(autoRefresh.checked){
                            refreshJobsStatusTimer.start();
                         }else{
                            refreshJobsStatusTimer.stop();
@@ -51,48 +50,6 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
-            Row{
-                id:row1
-                spacing: units.gu(1)
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                TextField{
-                    id: filterJobField
-                    placeholderText: i18n.tr("Search job name")
-                    width: units.gu(32)
-                    enabled:false
-                    onTextChanged: {
-
-                        if(text.length === 0 ) { //show all
-                            sortedModelListJobs.filter.pattern = /./
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-                        }
-                    }
-                }
-
-                Button{
-                    id:jobFilterButton
-                    text: i18n.tr("Filter")
-                    width: units.gu(12)
-                    x: loadJobsButton.x
-                    onClicked: {
-                        if(filterJobField.text.length > 0 ) //filter
-                        {
-                            /* flag "i" = ignore case */
-                            sortedModelListJobs.filter.pattern = new RegExp(filterJobField.text, "i")
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-
-                        } else { //show all
-
-                            sortedModelListJobs.filter.pattern = /./
-                            sortedModelListJobs.sort.order = Qt.AscendingOrder
-                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
-                        }
-                    }
-                }
-            }
 
             Row{
                 id:row2
@@ -101,7 +58,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                 Label{
                     id: lastCheckLabel
-                    text: ""
+                    text:  " "
                     font.bold: false
                     font.pointSize: units.gu(1)
                 }
@@ -114,6 +71,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
+
             Row{
                 id: row3
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -123,7 +81,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     id: jenkinsUrlChooser
 
                     Dialog {
-                        id: subCategoryPickerDialog
+                        id: jenkinsUrlChooserDialog
                         title: i18n.tr("Found: "+jenkinsUrlComboModel.count+ "Jenkins url(s)")
 
                         OptionSelector {
@@ -141,7 +99,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                                 text: i18n.tr("Close")
                                 width: units.gu(14)
                                 onClicked: {
-                                    PopupUtils.close(subCategoryPickerDialog)
+                                    PopupUtils.close(jenkinsUrlChooserDialog)
                                 }
                             }
 
@@ -149,18 +107,14 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                                 text: i18n.tr("Select")
                                 width: units.gu(14)
                                 onClicked: {
-                                    var name = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).name;
-                                    var url = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;
-
-                                    jenkinsUrlChooserField.text = name;
-                                    jenkinUrlText.text = url;
+                                    jenkinsUrlChooserField.text = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).name;
+                                    rootPage.jenkinsTargetUrl = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;;
                                     /* clean old showed values */
                                     modelListJobs.clear();
-
                                     /* blank old values */
-                                    lastCheckLabel.text = " ";                                    
+                                    lastCheckLabel.text = " ";
 
-                                    PopupUtils.close(subCategoryPickerDialog)
+                                    PopupUtils.close(jenkinsUrlChooserDialog)
                                 }
                             }
                         }
@@ -172,36 +126,35 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     width: units.gu(32)
                     color: UbuntuColors.warmGrey
                     iconName: "find"
-                    text: i18n.tr("Choose Target Jenkins...")
+                    text: i18n.tr("Choose Jenkins...")
                     onClicked:  {
                         PopupUtils.open(jenkinsUrlChooser, jenkinsUrlChooserField)
                     }
                 }
 
-                /*
                 ActivityIndicator {
                    id: loadingJobListActivity
                 }
-                */
-
 
                 Button {
                     id:loadJobsButton
                     width: units.gu(12)
                     text: i18n.tr("Load jobs")
-                    onClicked: {                       
+                    onClicked: {
 
-                        if(! Utility.isInputTextEmpty(jenkinUrlText.text)){
+                        if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running //start
+                            loadingJobListActivity.running = !loadingJobListActivity.running /* start animation */
 
                             modelListJobs.clear();
-                            JobsRestClient.getJobList(jenkinUrlText.text)
+                            JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
                             filterJobField.enabled = true;
                             autoRefresh.enabled = true;
-                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")                          
+                            jobFilterTypeSelector.enabled = true;
+                            jobFilterButton.enabled = true;
+                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running  //stop
+                            loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
                         } else {
                             PopupUtils.open(invalidInputPopUp);
                         }
@@ -211,22 +164,23 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 /* to refresh displayed jobs and status */
                 Timer {
                     id: refreshJobsStatusTimer
-                    interval: 120000;  //120 sec
+                    interval: 120000;  /* millisec */
                     running: false;
                     repeat: true
                     onTriggered: {
-                        //console.log("Refresh jobs status at: "+ Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss"))
+                        //console.log("Refreshing jobs status at: "+ Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss"))
 
-                        if(! Utility.isInputTextEmpty(jenkinUrlText.text)){
+                        if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running //start
+                            loadingJobListActivity.running = !loadingJobListActivity.running /* start animation */
 
                             modelListJobs.clear();
-                            JobsRestClient.getJobList(jenkinUrlText.text)
+                            JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
                             lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
                             lastCheckLabel.visible = true;
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running  //stop
+                            loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
+
                         } else {
                             PopupUtils.open(invalidInputPopUp);
                         }
@@ -234,16 +188,99 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                 }
             }
 
+
             Row{
-                id: jenkinUrlRow
-                /* Display the full Jenkins URL */
-                Text {
-                    id: jenkinUrlText
-                    font.pointSize: units.gu(1.2)
+                id:row1
+                spacing: units.gu(0.4)
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                Label {
+                   text: i18n.tr("Filter:")
+                   anchors.verticalCenter: filterJobField.verticalCenter
                 }
 
-                ActivityIndicator {
-                   id: loadingJobListActivity
+                Rectangle{
+                    id:itemSelectorContainer
+                    width: units.gu(16) // filterJobField.width/2
+                    height:filterJobField.height - units.gu(2)
+
+                    ListItem.ItemSelector {
+                        id: jobFilterTypeSelector
+                        enabled:false
+                        delegate: filterTypeSelectorDelegate
+                        model: searchFilterModel
+                        clip:true
+                        containerHeight: itemHeight * 2
+                    }
+                }
+
+                TextField{
+                    id: filterJobField
+                    placeholderText: i18n.tr("Job name or Job status")
+                    width: units.gu(25)
+                    enabled:false
+                    onTextChanged: {
+
+                        if(text.length === 0 ) { /* show all jobs */
+                            sortedModelListJobs.filter.pattern = /./
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+                        }
+                    }
+                }
+            }
+
+            Row{
+                id: doFilterRow
+                spacing:  units.gu(11)
+
+                Label{
+                    id:placeholder
+                    width: parent.width/2
+                    text: ""
+                }
+
+                Button{
+                    id:jobFilterButton
+                    text: i18n.tr("Filter")
+                    width: units.gu(12)
+                    enabled: false
+                    x: loadJobsButton.x
+
+                    onClicked: {
+
+                        /* default */
+                        var filtetCriteria = "jobName";
+
+                        if (searchFilterModel.get(jobFilterTypeSelector.selectedIndex).name === "<b>Job Status</b>"){
+                           filtetCriteria = "jobStatus";
+                        }
+
+                        // console.log("Chosen Search Criteria: "+filtetCriteria)
+
+                        if(filterJobField.text.length > 0 ) /* do filter */
+                        {
+                            /* flag "i" = ignore case */
+                            sortedModelListJobs.filter.pattern = new RegExp(filterJobField.text, "i")
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+
+                            if(filtetCriteria === "jobStatus"){  /* filter by job status */
+                               sortedModelListJobs.sort.property = "jobStatus"
+                               sortedModelListJobs.filter.property = "jobStatus"
+
+                            }else{                       /* filter by job name */
+                               sortedModelListJobs.sort.property = "jobName"
+                               sortedModelListJobs.filter.property = "jobName"
+                            }
+
+                        } else { /* show all jobs */
+
+                            sortedModelListJobs.filter.pattern = /./
+                            sortedModelListJobs.sort.order = Qt.AscendingOrder
+                            sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
+                        }
+                    }
                 }
             }
         }

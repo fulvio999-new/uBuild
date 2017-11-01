@@ -124,7 +124,7 @@ MainView {
                 leadingActionBar.actions: [
                     Action {
                         id: aboutPopover
-                        /* note: icons names are file names under: /usr/share/icons/suru/actions/scalable */
+                        /* icons names are file names under: /usr/share/icons/suru/actions/scalable */
                         iconName: "info"
                         text: i18n.tr("About")
                         onTriggered:{
@@ -156,7 +156,7 @@ MainView {
 
             /* the list of ALL jobs loaded from the chosen Jenkins */
             ListModel{
-                id: modelListJobs
+               id: modelListJobs
             }
 
             Component {
@@ -164,14 +164,13 @@ MainView {
                JobListDelegate{}
             }
 
-            /* keep sorted the loaded jobs List based on "jobName" property */
+            /* keep sorted the loaded jobs List based on "filter.property" property
+               provided by the user with the filter combo */
             SortFilterModel {
                 id: sortedModelListJobs
-                model: modelListJobs
-                //sort.property: "jobName"
+                model: modelListJobs              
                 sort.order: Qt.AscendingOrder
-                sortCaseSensitivity: Qt.CaseSensitive
-                //filter.property: "jobName"
+                sortCaseSensitivity: Qt.CaseSensitive                
             }
 
             /* The Jobs list loaded from the chosen Jenkins url */
@@ -190,11 +189,10 @@ MainView {
                 clip: true
             }
 
-
             Component {
-                 id: reportTypeSelectorDelegate
-                 OptionSelectorDelegate { text: name; }
-             }
+                id: filterTypeSelectorDelegate
+                OptionSelectorDelegate { text: name; }
+            }
 
             /* The available Job filter criteria */
             ListModel {
@@ -236,7 +234,7 @@ MainView {
             property string jobName;     /* the name of the selected job */
             property string jenkinsBaseUrl;
 
-            /* filled with the artifacts found for the chosen build */
+            /* contains the artifacts found for the chosen job */
             ListModel{
                id: artifactList
             }
@@ -296,7 +294,7 @@ MainView {
         }
 
 
-        //----------------- Configuration page -----------------
+        //----------------- App Configuration page -----------------
         Page {
             id: configurationPage
             visible: false
@@ -322,7 +320,7 @@ MainView {
             }
         }
 
-       //---------------------- Show the currently saved Jenkins URL ---------------------------------
+       //---------------------- Show the currently saved Jenkins URL and their alias ------------------------
 
        Page{
             id:savedJenkinsUrlPage
@@ -334,12 +332,12 @@ MainView {
 
             /* the list of saved Jenkins url */
             ListModel{
-                id: savedJenkinsUrlListModel
+               id: savedJenkinsUrlListModel
             }
 
             Component {
-                id: jenkinsUrlDelegate
-                JenkinsUrlDelegate{}
+               id: jenkinsUrlDelegate
+               JenkinsUrlDelegate{}
             }          
 
             UbuntuListView {
@@ -361,9 +359,7 @@ MainView {
                 flickableItem: savedJenkinsListView
                 align: Qt.AlignTrailing
             }
-        }
-
-       //--------------------------------
+        }      
     }
 
 }

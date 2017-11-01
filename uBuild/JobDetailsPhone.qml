@@ -22,7 +22,7 @@ import "JobsRestClient.js" as JobsRestClient
 
         Component.onCompleted: {
 
-            //execute the REST call to get the details of the selected job
+            /* execute the REST call to get the details of the selected job */
             if (pageLoader.status === Loader.Loading){
                 JobsRestClient.getJobDetails(jobDetailsPage.jenkinsBaseUrl,jobDetailsPage.jobName); //,jobDetailsPage.nodeType);
             }
@@ -253,8 +253,8 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastStableArtifactsArrayLabel
-                anchors.verticalCenter: showArtifactButton.verticalCenter
-                text: "<b>Artifacts: </b>"
+                anchors.verticalCenter: showArtifactButton.verticalCenter                
+                text: "<b>Artifact(s) found: "+artifactList.count+" </b>"
                 fontSize: "small"
             }
 
@@ -278,7 +278,7 @@ import "JobsRestClient.js" as JobsRestClient
         }
 
 
-        //----- Last Failed Build ---
+        //----- Last Failed Build
         Row{
 
             Label {
@@ -305,7 +305,7 @@ import "JobsRestClient.js" as JobsRestClient
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
-        //------------------------
+
 
         /* line separator */
         Rectangle {
@@ -328,14 +328,14 @@ import "JobsRestClient.js" as JobsRestClient
         }
 
         Row{
+            spacing: units.gu(4)
+
             Label {
                 id: lastUnstableBuildNumberLabel
                 text: "<b>Build number: </b>"
                 fontSize: "small"
             }
-        }
 
-        Row{
             Label {
                 id: lastUnstableBuildUrlLabel
                 text: "<b>URL: </b>"
@@ -343,6 +343,8 @@ import "JobsRestClient.js" as JobsRestClient
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
+
+
         //------------------------
 
   }

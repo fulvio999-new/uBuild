@@ -9,15 +9,14 @@ import "Storage.js" as Storage
 import "utility.js" as Utility
 
 /*
-  Display a a seved Jenkins url with the operations to manage it: edit, delete
+  Display a seved Jenkins url with his Alias and offer the operations to manage it: edit, delete
 */  
 
     Item {
         id: jenkinsUrlListDelegate
 
         width: configurationPage.width
-        height: units.gu(13) //the heigth of the rectangular container
-
+        height: units.gu(13) /* the heigth of the rectangular container */
         visible: true;
 
         /* create a container for each category */
@@ -47,12 +46,10 @@ import "utility.js" as Utility
                 text: "<b>"+i18n.tr("Remove selected Jenkins URL ?")+ "<br/>"+i18n.tr("(there is no restore)")+"</b>"
 
                 Rectangle {
-                    width: jenkinsUrlListDelegate.width; // 180;
+                    width: jenkinsUrlListDelegate.width;
                     height: 50
                     Item{
-
                         Column{
-
                             spacing: units.gu(1)
 
                             Row{
@@ -253,7 +250,8 @@ import "utility.js" as Utility
                                     urlTextField.enabled = false
                                     saveUrlRow.visible = false
 
-                                    Storage.loadAllJenkinsUrl();  //refresh url chooser
+                                    /* refresh model for the url chooser popup button */
+                                    Storage.loadAllJenkinsUrl();
                                     Storage.loadAllJenkinsUrlForEditing();
 
                                     PopupUtils.open(operationSuccessResult);

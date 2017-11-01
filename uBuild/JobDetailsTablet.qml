@@ -23,7 +23,7 @@ import "JobsRestClient.js" as JobsRestClient
 
         Component.onCompleted: {
 
-            //execute the REST call to get the details of the selected job
+            /* execute the REST call to get the details of the selected job */
             if (pageLoader.status === Loader.Loading){
                 JobsRestClient.getJobDetails(jobDetailsPage.jenkinsBaseUrl,jobDetailsPage.jobName);
             }

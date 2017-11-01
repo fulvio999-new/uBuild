@@ -16,8 +16,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
       Show the Job search form shown when running on Tablet
    */
      Column{
-            id: listHeader
-           // x: jobsListPage.width/4
+            id: listHeader          
             anchors.horizontalCenter:parent.horizontalCenter
             spacing: units.gu(1.5) 
 
@@ -107,12 +106,9 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             Button {
                                 text: i18n.tr("Select")
                                 width: units.gu(14)
-                                onClicked: {
-                                    var name = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).name;
-                                    var url = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;
-
-                                    jenkinsUrlChooserField.text = name;
-                                    rootPage.jenkinsTargetUrl = url;
+                                onClicked: { 
+                                    jenkinsUrlChooserField.text = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).name;
+                                    rootPage.jenkinsTargetUrl = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;;
                                     /* clean old showed values */
                                     modelListJobs.clear();
                                     /* blank old values */
@@ -140,7 +136,6 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                    id: loadingJobListActivity
                 }
 
-
                 Button {
                     id:loadJobsButton
                     width: units.gu(14)
@@ -149,7 +144,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                         if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running //start
+                            loadingJobListActivity.running = !loadingJobListActivity.running /* start animation */
 
                             modelListJobs.clear();
                             JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
@@ -159,7 +154,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             jobFilterButton.enabled = true;
                             lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")                            
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running  //stop
+                            loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
                         } else {
                             PopupUtils.open(invalidInputPopUp);
                         }
@@ -173,18 +168,19 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     running: false;
                     repeat: true
                     onTriggered: {
-                        //console.log("Refresh jobs status at: "+ Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss"))
+                        //console.log("Refreshing jobs status at: "+ Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss"))
 
                         if(! Utility.isInputTextEmpty(rootPage.jenkinsTargetUrl)){
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running //start
+                            loadingJobListActivity.running = !loadingJobListActivity.running /* start animation */
 
                             modelListJobs.clear();
                             JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
                             lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
                             lastCheckLabel.visible = true;                           
 
-                            loadingJobListActivity.running = !loadingJobListActivity.running  //stop
+                            loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
+
                         } else {
                             PopupUtils.open(invalidInputPopUp);
                         }
@@ -211,7 +207,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     ListItem.ItemSelector {
                         id: jobFilterTypeSelector
                         enabled:false
-                        delegate: reportTypeSelectorDelegate //serve ???
+                        delegate: filterTypeSelectorDelegate
                         model: searchFilterModel
                         clip:true
                         containerHeight: itemHeight * 2
@@ -225,7 +221,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     enabled:false
                     onTextChanged: {
 
-                        if(text.length === 0 ) { /* show all */
+                        if(text.length === 0 ) { /* show all jobs */
                             sortedModelListJobs.filter.pattern = /./
                             sortedModelListJobs.sort.order = Qt.AscendingOrder
                             sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
@@ -245,28 +241,28 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                         var filtetCriteria = "jobName";
 
                         if (searchFilterModel.get(jobFilterTypeSelector.selectedIndex).name === "<b>Job Status</b>"){
-                           filtetCriteria = "jobStatus"; //jobColor
+                           filtetCriteria = "jobStatus";
                         }
 
                         // console.log("Chosen Search Criteria: "+filtetCriteria)
 
-
-                        if(filterJobField.text.length > 0 ) //filter
+                        if(filterJobField.text.length > 0 ) /* do filter */
                         {
                             /* flag "i" = ignore case */
                             sortedModelListJobs.filter.pattern = new RegExp(filterJobField.text, "i")
                             sortedModelListJobs.sort.order = Qt.AscendingOrder
                             sortedModelListJobs.sortCaseSensitivity = Qt.CaseSensitive
 
-                            if(filtetCriteria === "jobStatus"){  //filter by status
+                            if(filtetCriteria === "jobStatus"){  /* filter by job status */
                                sortedModelListJobs.sort.property = "jobStatus"
                                sortedModelListJobs.filter.property = "jobStatus"
-                            }else{
+
+                            }else{                       /* filter by job name */
                                sortedModelListJobs.sort.property = "jobName"
                                sortedModelListJobs.filter.property = "jobName"
                             }
 
-                        } else { //show all
+                        } else { /* show all jobs */
 
                             sortedModelListJobs.filter.pattern = /./
                             sortedModelListJobs.sort.order = Qt.AscendingOrder
@@ -275,6 +271,4 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     }
                 }
             }
-
         }
-
