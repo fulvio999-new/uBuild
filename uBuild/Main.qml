@@ -26,7 +26,7 @@ MainView {
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.1"
+    property string appVersion : "1.2"
 
     property string jenkinsTargetUrl;
 
