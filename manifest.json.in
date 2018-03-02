@@ -1,7 +1,7 @@
 {
     "name": "ubuild",
     "description": "A simple read-only monitor for your favourite Jenkins",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "uBuild",
     "hooks": {
         "uBuild": {
