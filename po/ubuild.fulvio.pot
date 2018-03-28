@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-01 21:02+0100\n"
+"POT-Creation-Date: 2018-03-28 16:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,185 +17,377 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/AboutProductDialog.qml:10
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/AboutProductDialog.qml:10
 msgid "Product Info"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:47
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:45
-msgid "Add a new Jenkins"
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/AboutProductDialog.qml:11
+msgid "A Simple Read-only monitor for your favourite Jenkins"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:58
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:56
-msgid "Display Name:"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:75
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:70
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:157
-msgid "URL:"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:91
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:106
-msgid "Field required"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:100
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:84
-msgid "Save"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:122
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:117
-msgid "Show"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPagePhone.qml:136
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/ConfigurationPageTablet.qml:131
-msgid "Load Default"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/DataBaseEraserDialog.qml:49
-msgid "Succesfully Removed ALL data"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:9
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/NoDataFoundDialog.qml:11
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/OperationSuccessResult.qml:11
-msgid "Operation Result"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:15
-msgid "Invalid input: "
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/InvalidInputPopUp.qml:20
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:67
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:99
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:99
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:261
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/AboutProductDialog.qml:14
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/InvalidInputPopUp.qml:20
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:67
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:99
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:99
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:261
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/OperationSuccessResult.qml:19
 msgid "Close"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:46
-msgid "Remove selected Jenkins URL ?"
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:47
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:45
+msgid "Add a new Jenkins"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:46
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:58
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:56
+msgid "Display Name:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:75
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:70
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:157
+msgid "URL:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:91
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:106
+msgid "Field required"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:100
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:84
+msgid "Save"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:122
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:117
+msgid "Show"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPagePhone.qml:136
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/ConfigurationPageTablet.qml:131
+msgid "Load Default"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:13
+msgid "Remove ALL Saved Jenkins URL ?"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:13
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:46
 msgid "(there is no restore)"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:73
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:42
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:73
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:141
 msgid "Delete"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:81
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:49
+msgid "Succesfully Removed ALL data"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/InvalidInputPopUp.qml:9
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/NoDataFoundDialog.qml:11
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/OperationSuccessResult.qml:11
+msgid "Operation Result"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/InvalidInputPopUp.qml:15
+msgid "Invalid input"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:32
+msgid "Display name or url"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:46
+msgid "Remove selected Jenkins URL ?"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:81
 msgid "Operation executed successfully"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JenkinsUrlDelegate.qml:138
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:138
 msgid "Display name:"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:70
-msgid "Job name: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:37
+msgid "General Data"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:75
-msgid "url: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:46
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:47
+msgid "Name"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobListDelegate.qml:80
-msgid "Status: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:54
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:52
+msgid "Description"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:36
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:63
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:138
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:179
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:226
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:303
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:341
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:67
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:127
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:164
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:201
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:276
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:312
+msgid "URL"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:72
+msgid "Health report descr.:"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:82
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:83
+msgid "Health report score"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:88
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:88
+msgid "In Queue"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:94
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:61
+msgid "Buildable"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:112
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:105
+msgid "Build Informations"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:123
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:115
+msgid "Total builds"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:130
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:121
+msgid "Last build number"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:160
+msgid "Last complete build"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:171
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:212
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:295
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:335
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:158
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:195
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:270
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:306
+msgid "Build number"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:201
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:185
+msgid "Last stable build"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:218
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:222
+msgid "Build result"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:238
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:212
+msgid "Build time"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:246
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:217
+msgid "Build estimated duration"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:257
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:232
+msgid "Artifact(s) found"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:286
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:260
+msgid "Last failed build"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:324
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:296
+msgid "Last Unstable build"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:75
+msgid "Health report description"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:148
+msgid "Last completed build"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:237
+msgid "Display"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:70
+msgid "Job name"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:75
+msgid "url"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:80
+msgid "Status"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:121
+msgid "Success"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:125
+msgid "Failed"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:130
+msgid "In progress"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:134
+msgid "Disabled"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:144
+msgid "Aborted"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:148
+msgid "No built"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:36
 msgid "Enable auto-refresh (2 minutes)"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:68
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:68
-msgid "Total Jobs found: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:68
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:68
+msgid "Total Jobs found"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:85
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:85
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:249
-msgid "Found: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:85
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:85
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:249
+msgid "Found"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:107
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:107
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:85
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:85
+msgid "Jenkins url(s)"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:107
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:107
 msgid "Select"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:129
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:129
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:129
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:129
 msgid "Choose Jenkins..."
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:142
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:142
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:142
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:142
 msgid "Load jobs"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:155
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:179
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:155
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:179
-msgid "Last check: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:155
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:179
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:179
+msgid "Last check"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:198
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:198
 msgid "Filter:"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:219
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:219
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:219
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:219
 msgid "Job name or Job status"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPagePhone.qml:245
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:234
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:245
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:234
 msgid "Filter"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/JobsMainPageTablet.qml:198
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:155
+msgid "Last check: "
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:198
 msgid "Filter by:"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:129
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:86
+msgid "Please, select an URL"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:129
 msgid "About"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:278
-msgid "Details for: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:149
+msgid "Settings"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:303
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:249
+msgid "Artifact(s)"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:278
+msgid "Details for"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:283
+msgid "Back"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:303
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/Main.qml:330
-msgid "Saved Jenkins Url(s) found: "
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:330
+msgid "Saved Jenkins Url(s) found"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/NoDataFoundDialog.qml:14
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/NoDataFoundDialog.qml:14
 msgid "No saved Jenkins url found to display"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/OperationSuccessResult.qml:14
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/OperationSuccessResult.qml:14
 msgid "Operation executed Successfully"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/uBuild/uBuild/utility.js:116
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/utility.js:116
 #, qt-format
 msgid "<a href=\"%1\">"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/build-uBuild-Desktop-Debug/uBuild/uBuild.desktop.h:1
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/build/uBuild/uBuild.desktop.h:1
 msgid "uBuild"
 msgstr ""

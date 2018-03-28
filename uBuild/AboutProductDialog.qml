@@ -8,10 +8,10 @@ import Ubuntu.Components.Popups 1.3
 Dialog {
        id: aboutProductDialogue
        title: i18n.tr("Product Info")
-       text: "uBuild: version "+rootPage.appVersion+"<br> Author: fulvio <br> A Simple Read-only monitor for your favourite Jenkins"
+       text: "uBuild: version "+rootPage.appVersion+"<br> Author: fulvio <br>"+i18n.tr("A Simple Read-only monitor for your favourite Jenkins")
 
        Button {
-           text: "Close"
+           text: i18n.tr("Close")
            onClicked: PopupUtils.close(aboutProductDialogue)
        }
 }

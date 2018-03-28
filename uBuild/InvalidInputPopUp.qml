@@ -12,7 +12,7 @@ Dialog {
     property string msg;
 
     Label{
-        text: i18n.tr("Invalid input: ") +msg
+        text: i18n.tr("Invalid input")+": " +msg
         color: UbuntuColors.red
     }
 

@@ -65,7 +65,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                 Label{
                     id: jobsFoundLabel
-                    text:  i18n.tr("Total Jobs found: ")+ listView.count
+                    text:  i18n.tr("Total Jobs found")+": "+ listView.count
                     font.bold: false
                     font.pointSize: units.gu(1)
                 }
@@ -82,7 +82,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                     Dialog {
                         id: jenkinsUrlChooserDialog
-                        title: i18n.tr("Found: "+jenkinsUrlComboModel.count+ "Jenkins url(s)")
+                        title: i18n.tr("Found")+": "+jenkinsUrlComboModel.count+ i18n.tr("Jenkins url(s)")
 
                         OptionSelector {
                             id: jenkinsAliasSelector
@@ -152,7 +152,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             autoRefresh.enabled = true;
                             jobFilterTypeSelector.enabled = true;
                             jobFilterButton.enabled = true;
-                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
+                            lastCheckLabel.text = i18n.tr("Last check")+": " + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
 
                             loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
                         } else {
@@ -176,7 +176,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                             modelListJobs.clear();
                             JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
-                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
+                            lastCheckLabel.text = i18n.tr("Last check")+": " + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
                             lastCheckLabel.visible = true;
 
                             loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */

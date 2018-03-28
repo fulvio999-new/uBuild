@@ -16,7 +16,7 @@ Dialog {
     }
 
     Button {
-        text: "Close"
+        text: i18n.tr("Close")
         onClicked:
             PopupUtils.close(operationSuccessDialog)
     }

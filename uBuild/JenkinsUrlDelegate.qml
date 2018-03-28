@@ -10,7 +10,7 @@ import "utility.js" as Utility
 
 /*
   Display a seved Jenkins url with his Alias and offer the operations to manage it: edit, delete
-*/  
+*/
 
     Item {
         id: jenkinsUrlListDelegate
@@ -29,7 +29,7 @@ import "utility.js" as Utility
 
         Component{
            id: invalidInputPopUp
-           InvalidInputPopUp{msg:"Display name or url"}
+           InvalidInputPopUp{msg:i18n.tr("Display name or url")}
         }
 
         Component{
@@ -116,8 +116,8 @@ import "utility.js" as Utility
             id: topLayout
             x: 10; y: 1; height: background.height; width: parent.width
 
-            Column {               
-                id: containerColumn             
+            Column {
+                id: containerColumn
                 width: background.width - manageUrlColumn.width
                 height: jenkinsUrlListDelegate.height
                 spacing: units.gu(1)
@@ -213,7 +213,7 @@ import "utility.js" as Utility
                             width: editUrlIcon.width
                             height: editUrlIcon.height
                             onClicked: {
-                                displayNameTextField.enabled = true                               
+                                displayNameTextField.enabled = true
                                 urlTextField.enabled = true
                                 saveUrlRow.visible = true
                             }

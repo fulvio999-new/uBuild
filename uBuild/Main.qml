@@ -22,11 +22,11 @@ MainView {
     applicationName: "ubuild"
 
     width: units.gu(160)
-    height: units.gu(90)  
+    height: units.gu(90)
 
     anchorToKeyboard: true
 
-    property string appVersion : "1.2"
+    property string appVersion : "1.2.1"
 
     property string jenkinsTargetUrl;
 
@@ -62,7 +62,7 @@ MainView {
     /* The list of registered Jenkins url, filled using Database saved content */
     ListModel {
        id: jenkinsUrlComboModel
-    }    
+    }
 
     Component {
         id: urlSelectorDelegate
@@ -83,7 +83,7 @@ MainView {
 
     Component {
        id: invalidInputPopUp
-       InvalidInputPopUp{msg:" Please, select an URL"}
+       InvalidInputPopUp{msg:i18n.tr("Please, select an URL")}
     }
 
     /* Loader used to dinamically create the page with the job details  only for the chosen job */
@@ -138,7 +138,7 @@ MainView {
 
                     Action {
                         iconName: "delete"
-                        text: "Delete"
+                        text: i18n.tr("Delete")
                         onTriggered:{
                             PopupUtils.open(dataBaseEraserDialog)
                         }
@@ -146,7 +146,7 @@ MainView {
 
                     Action {
                         iconName: "settings"
-                        text: "Settings"
+                        text: i18n.tr("Settings")
                         onTriggered:{
                             pageStack.push(configurationPage)
                         }
@@ -168,9 +168,9 @@ MainView {
                provided by the user with the filter combo */
             SortFilterModel {
                 id: sortedModelListJobs
-                model: modelListJobs              
+                model: modelListJobs
                 sort.order: Qt.AscendingOrder
-                sortCaseSensitivity: Qt.CaseSensitive                
+                sortCaseSensitivity: Qt.CaseSensitive
             }
 
             /* The Jobs list loaded from the chosen Jenkins url */
@@ -183,7 +183,7 @@ MainView {
 
                 /* disable the dragging of the model list elements */
                 boundsBehavior: Flickable.StopAtBounds
-                highlight: HighlightComponent{}              
+                highlight: HighlightComponent{}
                 focus: true
                 /* clip:true to prevent that UbuntuListView draw out of his assigned rectangle, default is false */
                 clip: true
@@ -246,7 +246,7 @@ MainView {
                 Dialog {
                     id: subCategoryPickerDialog
                     contentWidth: units.gu(42)
-                    title: i18n.tr("Found: "+artifactList.count +" Artifact(s)")
+                    title: i18n.tr("Found")+": "+artifactList.count +" "+i18n.tr("Artifact(s)")
 
                     OptionSelector {
                         id: subCategoryOptionSelector
@@ -275,12 +275,12 @@ MainView {
 
             header: PageHeader {
                 id: headerDetailsPage
-                title: i18n.tr("Details for: ") + "<b>" +jobDetailsPage.jobName +"</b>"
+                title: i18n.tr("Details for")+": " + "<b>" +jobDetailsPage.jobName +"</b>"
 
                 leadingActionBar.actions: [
                     Action {
                         iconName: "back"
-                        text: "Back"
+                        text: i18n.tr("Back")
 
                         onTriggered:{
                             pageStack.clear();
@@ -327,7 +327,7 @@ MainView {
             visible: false
             anchors.fill: parent
             header: PageHeader {
-                title: i18n.tr("Saved Jenkins Url(s) found: "+savedJenkinsUrlListModel.count)
+                title: i18n.tr("Saved Jenkins Url(s) found")+": "+savedJenkinsUrlListModel.count
             }
 
             /* the list of saved Jenkins url */
@@ -338,7 +338,7 @@ MainView {
             Component {
                id: jenkinsUrlDelegate
                JenkinsUrlDelegate{}
-            }          
+            }
 
             UbuntuListView {
                 id: savedJenkinsListView
@@ -359,9 +359,7 @@ MainView {
                 flickableItem: savedJenkinsListView
                 align: Qt.AlignTrailing
             }
-        }      
+        }
     }
 
 }
-
-

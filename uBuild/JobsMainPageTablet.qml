@@ -16,9 +16,9 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
       Show the Job search form shown when running on Tablet
    */
      Column{
-            id: listHeader          
+            id: listHeader
             anchors.horizontalCenter:parent.horizontalCenter
-            spacing: units.gu(1.5) 
+            spacing: units.gu(1.5)
 
             /* transparent placeholder: required to place the content under the header */
             Rectangle {
@@ -41,7 +41,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                     checked: false
                     enabled: false
                     onCheckedChanged: {
-                        if(autoRefresh.checked){                           
+                        if(autoRefresh.checked){
                            refreshJobsStatusTimer.start();
                         }else{
                            refreshJobsStatusTimer.stop();
@@ -65,7 +65,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                 Label{
                     id: jobsFoundLabel
-                    text:  i18n.tr("Total Jobs found: ")+ listView.count
+                    text:  i18n.tr("Total Jobs found")+": "+ listView.count
                     font.bold: false
                     font.pointSize: units.gu(1.2)
                 }
@@ -82,7 +82,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                     Dialog {
                         id: jenkinsUrlChooserDialog
-                        title: i18n.tr("Found: "+jenkinsUrlComboModel.count+ "Jenkins url(s)")
+                        title: i18n.tr("Found")+": "+jenkinsUrlComboModel.count+ i18n.tr("Jenkins url(s)")
 
                         OptionSelector {
                             id: jenkinsAliasSelector
@@ -106,13 +106,13 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             Button {
                                 text: i18n.tr("Select")
                                 width: units.gu(14)
-                                onClicked: { 
+                                onClicked: {
                                     jenkinsUrlChooserField.text = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).name;
                                     rootPage.jenkinsTargetUrl = jenkinsUrlComboModel.get(jenkinsAliasSelector.selectedIndex).description;;
                                     /* clean old showed values */
                                     modelListJobs.clear();
                                     /* blank old values */
-                                    lastCheckLabel.text = " ";                             
+                                    lastCheckLabel.text = " ";
 
                                     PopupUtils.close(jenkinsUrlChooserDialog)
                                 }
@@ -152,7 +152,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
                             autoRefresh.enabled = true;
                             jobFilterTypeSelector.enabled = true;
                             jobFilterButton.enabled = true;
-                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")                            
+                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
 
                             loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
                         } else {
@@ -176,8 +176,8 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
                             modelListJobs.clear();
                             JobsRestClient.getJobList(rootPage.jenkinsTargetUrl)
-                            lastCheckLabel.text = i18n.tr("Last check: ") + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
-                            lastCheckLabel.visible = true;                           
+                            lastCheckLabel.text = i18n.tr("Last check")+": " + Qt.formatDateTime(new Date(), "dd MMMM yyyy HH:mm:ss")
+                            lastCheckLabel.visible = true;
 
                             loadingJobListActivity.running = !loadingJobListActivity.running  /* stop animation */
 

@@ -51,7 +51,7 @@ import "utility.js" as Utility
                 listView.currentIndex = index
                 loadingJobDetailsActivity.running = false
             }
-        }        
+        }
 
         /* create a row for each entry in the Model */
         Row {
@@ -67,17 +67,17 @@ import "utility.js" as Utility
                 spacing: units.gu(1)
 
                 Label {
-                    text: i18n.tr("Job name: ") + jobName
+                    text: i18n.tr("Job name")+": " + jobName
                     fontSize: "small"
                 }
 
                 Label {
-                    text: i18n.tr("url: ") + Utility.truncateUrlString(jobUrl)
+                    text: i18n.tr("url")+": " + Utility.truncateUrlString(jobUrl)
                     fontSize: "small"
                 }
 
                 Label {
-                    text: i18n.tr("Status: ")
+                    text: i18n.tr("Status")+": "
                     id : jobStatusLabel
                     fontSize: "small"
                     font.bold: true
@@ -99,7 +99,7 @@ import "utility.js" as Utility
                    of the project:  $$files(*.png,true) and or  $$files(*.gif,true) then run Build --> qmake
                 */
                 AnimatedImage {
-                    id: buildStatusImage                   
+                    id: buildStatusImage
                     width: parent.width * 0.8
                     height: parent.height * 0.8
                     anchors.centerIn: buildStatusColumn.Right
@@ -118,20 +118,20 @@ import "utility.js" as Utility
 
                     if(jobColor === "blue"){
                         buildStatusImage.source = "blue.png"  //success
-                        jobStatusLabel.text = jobStatusLabel.text + "Success"
+                        jobStatusLabel.text = jobStatusLabel.text + i18n.tr("Success")
 
                     }else if(jobColor === "red"){
                         buildStatusImage.source = "red.png"     //failed
-                        jobStatusLabel.text = jobStatusLabel.text + "Failed"
+                        jobStatusLabel.text = jobStatusLabel.text + i18n.tr("Failed")
 
                     }else if(jobColor.indexOf("anime") !== -1){ // === "blue_anime") or 'red_anime' or 'aborted_anime'
                         buildStatusImage.source = "building_anime.gif"  //in progress
                         buildStatusImage.paused = false
-                        jobStatusLabel.text = jobStatusLabel.text + "In progress"
+                        jobStatusLabel.text = jobStatusLabel.text + i18n.tr("In progress")
 
-                    }else if(jobColor === "disabled"){                        
+                    }else if(jobColor === "disabled"){
                         buildStatusImage.source = "disabled.png" //disabled
-                        jobStatusLabel.text = jobStatusLabel.text + "Disabled"
+                        jobStatusLabel.text = jobStatusLabel.text + i18n.tr("Disabled")
 
 
                     /* for folders there is recursive sub-scan
@@ -141,14 +141,13 @@ import "utility.js" as Utility
 
                     }else if(jobColor === "aborted"){
                          buildStatusImage.source = "aborted.png"
-                         jobStatusLabel.text = jobStatusLabel.text + "Aborted"
+                         jobStatusLabel.text = jobStatusLabel.text + i18n.tr("Aborted")
 
                     }else if(jobColor === "notbuilt"){ //the project was never built
                         buildStatusImage.source = "nobuilt.png"
-                        jobStatusLabel.text = jobStatusLabel.text + "No built"
+                        jobStatusLabel.text = jobStatusLabel.text + i18n.tr("No built")
                     }
                 }
             }
         }
     }
-

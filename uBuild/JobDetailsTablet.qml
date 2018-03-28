@@ -34,7 +34,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: generalDataLabel
-                text: "<b>General Data</b>"
+                text: "<b>"+i18n.tr("General Data")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -44,12 +44,12 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: displayNameLabel
-                text: "<b>Name: </b>"
+                text: "<b>"+i18n.tr("Name")+": </b>"
             }
 
             Label {
                 id: jobDescriptionLabel
-                text: "<b>Description: </b>"
+                text: "<b>"+i18n.tr("Description")+": </b>"
             }
         }
 
@@ -58,13 +58,13 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: jobBuildableLabel
-                text: "<b>Buildable: </b>"
+                text: "<b>"+i18n.tr("Buildable")+": </b>"
             }
 
             Label {
                 id: jobUrlLabel
                 /* text updated from javascript */
-                text: "<b>URL: </b>"                
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -72,7 +72,7 @@ import "JobsRestClient.js" as JobsRestClient
         //health report
         Label {
             id: healthReportDescriptionLabel
-            text: "<b>Health report description: </b>"
+            text: "<b>"+i18n.tr("Health report description")+": </b>"
         }
 
         Row{
@@ -80,12 +80,12 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: healthReportScoreLabel
-                text: "<b>Health report score: </b>"
+                text: "<b>"+i18n.tr("Health report score")+": </b>"
             }
 
             Label {
                 id: jobInQueueLabel
-                text: "<b>In Queue: </b>"
+                text: "<b>"+i18n.tr("In Queue")+": </b>"
             }
         }
 
@@ -102,7 +102,7 @@ import "JobsRestClient.js" as JobsRestClient
         Row{
             Label {
                 id: buildLabel
-                text: "<b>Build Informations</b>"
+                text: "<b>"+i18n.tr("Build Informations")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -112,19 +112,19 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: totalBuildsLabel
-                text: "<b>Total builds: </b>"
+                text: "<b>"+i18n.tr("Total builds")+": </b>"
             }
 
             //---- Last Build
             Label {
                 id: lastBuildNumberLabel
-                text: "<b>Last build number: </b>"
+                text: "<b>"+i18n.tr("Last build number")+": </b>"
             }
 
             Label {
                 id: lastBuildUrlLabel
                 /* text updated with javascript */
-                text: "<b>URL: </b>"
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -145,7 +145,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastBuildLabel
-                text: "<b>Last complete build</b>"
+                text: "<b>"+i18n.tr("Last completed build")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -155,13 +155,13 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastCompletedBuildNumberLabel
-                text: "<b>Build number: </b>"
+                text: "<b>"+i18n.tr("Build number")+": </b>"
             }
 
             Label {
                 id: lastCompletedBuildUrlLabel
                 /* text updated with javascript */
-                text: "<b>URL: </b>"
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -182,7 +182,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastStableBuildLabel
-                text: "<b>Last stable build</b>"
+                text: "<b>"+i18n.tr("Last stable build")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -192,13 +192,13 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastStableBuildNumberLabel
-                text: "<b>Build number: </b>"
+                text: "<b>"+i18n.tr("Build number")+": </b>"
             }
 
             Label {
                 id: lastStableBuildUrlLabel
                 /* text updated by javascript */
-                text: "<b>URL: </b>"
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -209,17 +209,17 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastStableBuildTimestampLabel
-                text: "<b>Build time: </b>"
+                text: "<b>"+i18n.tr("Build time")+": </b>"
             }
 
             Label {
                 id: lastStableBuildEstimatedDurationLabel
-                text: "<b>Build estimated duration: </b>"
+                text: "<b>"+i18n.tr("Build estimated duration")+": </b>"
             }
 
             Label {
                 id: lastStableBuildResultLabel
-                text: "<b>Build result: </b>"
+                text: "<b>"+i18n.tr("Build result")+": </b>"
             }
         }
 
@@ -229,18 +229,18 @@ import "JobsRestClient.js" as JobsRestClient
             Label {
                 id: lastStableArtifactsArrayLabel
                 anchors.verticalCenter: showArtifactButton.verticalCenter
-                text: "<b>Artifact(s) found: "+artifactList.count+" </b>"
+                text: "<b>"+i18n.tr("Artifact(s) found")+": "+artifactList.count+" </b>"
             }
 
             Button{
                 id:showArtifactButton
-                text: "Display"
+                text: i18n.tr("Display")
                 color: UbuntuColors.graphite
                 onClicked: {
                    PopupUtils.open(popoverArtifactListComponent, showArtifactButton)
                 }
             }
-        }      
+        }
 
 
         /* line separator */
@@ -257,7 +257,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastFailedBuildLabel
-                text: "<b>Last failed build</b>"
+                text: "<b>"+i18n.tr("Last failed build")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -267,13 +267,13 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastFailedBuildNumberLabel
-                text: "<b>Build number: </b>"
+                text: "<b>"+i18n.tr("Build number")+": </b>"
             }
 
             Label {
                 id: lastFailedBuildUrlLabel
                 /* text updated with javascript */
-                text: "<b>URL: </b>"
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -293,7 +293,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastUnstableBuildLabel
-                text: "<b>Last Unstable build</b>"
+                text: "<b>"+i18n.tr("Last Unstable build")+"</b>"
                 color: UbuntuColors.blue
             }
         }
@@ -303,17 +303,16 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastUnstableBuildNumberLabel
-                text: "<b>Build number: </b>"
+                text: "<b>"+i18n.tr("Build number")+": </b>"
             }
 
             Label {
                 id: lastUnstableBuildUrlLabel
                 /* text updated with javascript */
-                text: "<b>URL: </b>"
+                text: "<b>"+i18n.tr("URL")+": </b>"
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
         //------------------------
 
    }
-
