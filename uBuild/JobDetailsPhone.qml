@@ -332,7 +332,7 @@ import "JobsRestClient.js" as JobsRestClient
 
             Label {
                 id: lastUnstableBuildNumberLabel
-                text: "<b>"+i18n.tr("Build number"+": </b>"
+                text: "<b>"+i18n.tr("Build number")+": </b>"
                 fontSize: "small"
             }
 

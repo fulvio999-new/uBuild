@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 16:03+0000\n"
+"POT-Creation-Date: 2018-03-29 10:45+0000\n"
 "PO-Revision-Date: 2018-03-28 18:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,7 +31,7 @@ msgstr "Un simple moniteur en lecture pour votre Jenkins"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:67
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:99
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:99
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:261
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:265
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/OperationSuccessResult.qml:19
 msgid "Close"
 msgstr "Fermer"
@@ -83,7 +83,7 @@ msgstr "(il n'y a pas de récupération)"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/DataBaseEraserDialog.qml:42
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JenkinsUrlDelegate.qml:73
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:141
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:145
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -299,7 +299,7 @@ msgstr "Tâches trouvées au total : "
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:85
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:85
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:249
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:253
 #, fuzzy
 msgid "Found"
 msgstr "Trouvées : "
@@ -356,37 +356,37 @@ msgstr "Dernière vérification : "
 msgid "Filter by:"
 msgstr "Filtrer"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:86
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:90
 #, fuzzy
 msgid "Please, select an URL"
 msgstr "Supprimer l'URL Jenkins sélectionnée ?"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:129
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:133
 msgid "About"
 msgstr "À propos"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:149
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:153
 msgid "Settings"
 msgstr "Paramètres"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:249
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:253
 msgid "Artifact(s)"
 msgstr "Artefact"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:278
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:282
 #, fuzzy
 msgid "Details for"
 msgstr "Détails pour : "
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:283
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:287
 msgid "Back"
 msgstr "Arrière"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:303
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:307
 msgid "Application Configuration"
 msgstr "Configuration de l'application"
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:330
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:334
 #, fuzzy
 msgid "Saved Jenkins Url(s) found"
 msgstr "URL Jenkins enregistrées et trouvées : "

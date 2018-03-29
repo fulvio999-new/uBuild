@@ -24,6 +24,10 @@ MainView {
     width: units.gu(160)
     height: units.gu(90)
 
+    /* phone 4.5 */
+    //width: units.gu(50)
+    //height: units.gu(96)
+
     anchorToKeyboard: true
 
     property string appVersion : "1.2.1"
