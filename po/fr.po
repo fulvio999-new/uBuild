@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:49+0000\n"
-"PO-Revision-Date: 2018-03-28 18:31+0200\n"
+"POT-Creation-Date: 2018-03-29 23:19+0000\n"
+"PO-Revision-Date: 2018-03-30 14:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -145,7 +145,7 @@ msgstr "La description"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:276
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:312
 msgid "URL"
-msgstr "URL "
+msgstr "URL"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:72
 msgid "Health report descr.:"
@@ -163,9 +163,8 @@ msgstr "dans la file d'attente"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:94
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:61
-#, fuzzy
 msgid "Buildable"
-msgstr "uBuild"
+msgstr "Constructible"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:112
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:105
@@ -174,9 +173,8 @@ msgstr "Build Information"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:123
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:115
-#, fuzzy
 msgid "Total builds"
-msgstr "Tâches trouvées au total : "
+msgstr "Total des builds"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:130
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:121
@@ -210,9 +208,8 @@ msgstr "Build résultat"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:238
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:212
-#, fuzzy
 msgid "Build time"
-msgstr "uBuild"
+msgstr "Temps de construction"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsPhone.qml:246
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:217
@@ -243,24 +240,20 @@ msgid "Last completed build"
 msgstr "Dernière build terminée"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobDetailsTablet.qml:237
-#, fuzzy
 msgid "Display"
-msgstr "Nom d'affichage :"
+msgstr "Nom d'affichage"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:70
-#, fuzzy
 msgid "Job name"
-msgstr "Nom de la tâche : "
+msgstr "Nom du Tâche"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:75
-#, fuzzy
 msgid "url"
-msgstr "url : "
+msgstr "url"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:80
-#, fuzzy
 msgid "Status"
-msgstr "État : "
+msgstr "État"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobListDelegate.qml:121
 msgid "Success"
@@ -293,22 +286,19 @@ msgstr "Activer l'actualisation automatique (2 minutes)"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:68
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:68
-#, fuzzy
 msgid "Total Jobs found"
-msgstr "Tâches trouvées au total : "
+msgstr "Tâches trouvées au total"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:85
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:85
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:253
-#, fuzzy
 msgid "Found"
-msgstr "Trouvées : "
+msgstr "Trouvées"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:85
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:85
-#, fuzzy
 msgid "Jenkins url(s)"
-msgstr "URL Jenkins enregistrées et trouvées : "
+msgstr "URL Jenkins"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:107
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:107
@@ -328,14 +318,12 @@ msgstr "Charger les tâches"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:155
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:179
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:179
-#, fuzzy
 msgid "Last check"
-msgstr "Dernière vérification : "
+msgstr "Dernière vérification"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:198
-#, fuzzy
 msgid "Filter:"
-msgstr "Filtrer"
+msgstr "Filtrer:"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPagePhone.qml:219
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:219
@@ -352,14 +340,12 @@ msgid "Last check: "
 msgstr "Dernière vérification : "
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/JobsMainPageTablet.qml:198
-#, fuzzy
 msgid "Filter by:"
-msgstr "Filtrer"
+msgstr "Filtrer par"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:90
-#, fuzzy
 msgid "Please, select an URL"
-msgstr "Supprimer l'URL Jenkins sélectionnée ?"
+msgstr "Veuillez sélectionner une URL"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:133
 msgid "About"
@@ -374,9 +360,8 @@ msgid "Artifact(s)"
 msgstr "Artefact"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:282
-#, fuzzy
 msgid "Details for"
-msgstr "Détails pour : "
+msgstr "Détails pour"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:287
 msgid "Back"
@@ -387,9 +372,8 @@ msgid "Application Configuration"
 msgstr "Configuration de l'application"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/Main.qml:334
-#, fuzzy
 msgid "Saved Jenkins Url(s) found"
-msgstr "URL Jenkins enregistrées et trouvées : "
+msgstr "URL Jenkins enregistrées"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/uBuild/source/uBuild/uBuild/NoDataFoundDialog.qml:14
 msgid "No saved Jenkins url found to display"
