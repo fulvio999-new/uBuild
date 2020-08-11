@@ -1,7 +1,7 @@
 {
     "name": "ubuild",
     "description": "A simple read-only monitor for your favourite Jenkins",
-    "architecture": "all",
+    "architecture": "@CLICK_ARCH@",
     "title": "uBuild",
     "hooks": {
         "uBuild": {
@@ -9,7 +9,7 @@
             "desktop": "uBuild/uBuild.desktop"
         }
     },
-    "version": "1.2.1",
+    "version": "1.2.3",
     "maintainer": "fulvio <fulvio999@gmail.com>",
     "framework": "ubuntu-sdk-16.04"
 }

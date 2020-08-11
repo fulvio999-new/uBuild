@@ -27,7 +27,7 @@ Function used to manage the application database where are saved the configured 
 
      if(settings.defaultDataImported == false) {
 
-         insertNewJenkins("UBPorts", "http://ci.ubports.com");
+         insertNewJenkins("UBPorts", "https://ci.ubports.com");
          insertNewJenkins("Ubuntu", "https://core-apps-jenkins.ubuntu.com/");
 
          return true;
@@ -79,7 +79,7 @@ Function used to manage the application database where are saved the configured 
         var db = getDatabase();
 
         db.transaction(function(tx) {
-            var rs = tx.executeSql('DELETE FROM jenkins_data WHERE id =?;',[jenkins_id]);            
+            var rs = tx.executeSql('DELETE FROM jenkins_data WHERE id =?;',[jenkins_id]);
            }
         );
   }
@@ -138,5 +138,5 @@ Function used to manage the application database where are saved the configured 
          }
        );
 
-       loadAllJenkinsUrl(); //refresh combo      
+       loadAllJenkinsUrl(); //refresh combo
  }
